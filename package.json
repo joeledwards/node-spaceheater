@@ -1,0 +1,30 @@
+{
+  "name": "spaceheater",
+  "version": "1.0.0",
+  "description": "Turn your PC into a space heater by spinning all CPU cores.",
+  "main": "heater.js",
+  "bin": {
+    "space-heater": "./heater.js",
+    "spaceheater": "./heater.js",
+    "lap-warmer": "./heater.js",
+    "lapwarmer": "./heater.js"
+  },
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "space",
+    "heater",
+    "space-heater",
+    "heat",
+    "warmth",
+    "cold"
+  ],
+  "author": "Joel Edwards <joeledwards@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
