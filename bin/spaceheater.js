@@ -8,6 +8,7 @@ const heater = require('../lib/heater')
   try {
     const defaultCoilCount = (os.cpus() || []).length || 2
     const {
+      delay: reportDelay,
       coils: coilCount
     } = yargs
       .env('SPACEHEATER')
@@ -19,11 +20,18 @@ const heater = require('../lib/heater')
             default: defaultCoilCount,
             alias: ['processes', 'c', 'p']
           })
+          .option('delay', {
+            type: 'number',
+            desc: 'Delay between metrics reports in seconds',
+            default: 5.0,
+            alias: ['d', 'report-delay']
+          })
       })
       .parse()
 
     await heater({
-      coilCount
+      coilCount,
+      reportDelay
     })
   } catch (error) {
     console.error('Fatal:', error)
