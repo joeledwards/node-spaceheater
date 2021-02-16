@@ -4,11 +4,17 @@
   "description": "Turn your PC into a space heater by spinning all CPU cores.",
   "main": "lib/heater.js",
   "bin": {
-    "space-heater": "./lib/heater.js",
-    "spaceheater": "./lib/heater.js",
-    "lap-warmer": "./lib/heater.js",
-    "lapwarmer": "./lib/heater.js"
+    "space-heater": "./bin/spaceheater.js",
+    "spaceheater": "./bin/spaceheater.js",
+    "lap-warmer": "./bin/spaceheater.js",
+    "lapwarmer": "./bin/spaceheater.js"
   },
+  "files": [
+    "bin/*.js",
+    "lib/**/*.js",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
