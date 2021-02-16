@@ -9,7 +9,8 @@ const heater = require('../lib/heater')
     const defaultCoilCount = (os.cpus() || []).length || 2
     const {
       delay: reportDelay,
-      coils: coilCount
+      coils: coilCount,
+      quiet
     } = yargs
       .env('SPACEHEATER')
       .command('$0', 'Spin CPUs', yarg => {
@@ -26,11 +27,17 @@ const heater = require('../lib/heater')
             default: 5.0,
             alias: ['d', 'report-delay']
           })
+          .option('quiet', {
+            type: 'boolean',
+            desc: 'just apply heat, do not output performance statistics',
+            alias: ['q']
+          })
       })
       .parse()
 
     await heater({
       coilCount,
+      quiet,
       reportDelay
     })
   } catch (error) {

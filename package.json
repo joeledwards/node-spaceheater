@@ -31,8 +31,8 @@
   "author": "Joel Edwards <joeledwards@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "standard": "^14.3.1",
-    "tap": "^14.9.1"
+    "standard": "^16.0.3",
+    "tap": "^14.11.0"
   },
   "dependencies": {
     "@buzuli/json": "^2.1.0",
