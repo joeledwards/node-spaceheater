@@ -1,6 +1,6 @@
 {
   "name": "spaceheater",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Turn your PC into a space heater by spinning all CPU cores.",
   "main": "lib/heater.js",
   "bin": {
