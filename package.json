@@ -38,6 +38,7 @@
     "@buzuli/json": "^2.1.0",
     "@buzuli/meter": "^1.4.0",
     "@buzuli/throttle": "^2.0.2",
-    "durations": "^3.4.2"
+    "durations": "^3.4.2",
+    "moment": "^2.29.1"
   }
 }
