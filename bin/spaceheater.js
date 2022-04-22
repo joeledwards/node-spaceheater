@@ -1,11 +1,13 @@
 #! /usr/bin/env node
 
+const c = require('@buzuli/color')
 const os = require('os')
 const yargs = require('yargs')
 const heater = require('../lib/heater')
 
 ;(async () => {
   try {
+    const cpus = os.cpus();
     const defaultCoilCount = (os.cpus() || []).length || 2
     const {
       delay: reportDelay,
@@ -34,6 +36,10 @@ const heater = require('../lib/heater')
           })
       })
       .parse()
+
+    cpus.forEach((cpu, index) => {
+      console.info(`CPU ${c.orange(index)}: ${c.blue(cpu.model)}`)
+    })
 
     await heater({
       coilCount,
