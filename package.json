@@ -40,6 +40,7 @@
     "@buzuli/throttle": "^2.0.2",
     "durations": "^3.4.2",
     "moment": "^2.29.1",
+    "pretty-bytes": "^5.6.0",
     "yargs": "^16.2.0"
   }
 }
