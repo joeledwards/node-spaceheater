@@ -36,7 +36,8 @@
     "tap": "^14.11.0"
   },
   "dependencies": {
-    "@buzuli/json": "^2.1.0",
+    "@buzuli/color": "^2.4.1",
+    "@buzuli/json": "^2.2.1",
     "@buzuli/meter": "^1.4.0",
     "@buzuli/throttle": "^2.0.2",
     "durations": "^3.4.2",
